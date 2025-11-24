@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Proyek</title>
+    <link rel="stylesheet" href="style3.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome</h1>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <nav class="menu">
+                    <a href="#" class="menu-item">Home</a>
+                    <a href="#" class="menu-item active">
+                        Project assessment
+                        <span class="active-arrow"></span>
+                    </a>
+                    <a href="#" class="menu-item">Log Out</a>
+                </nav>
+            </div>
+
+            <div class="form-area">
+                <form class="assessment-form">
+                    
+                    <div class="form-group">
+                        <label for="pbl-title">PBL Title</label>
+                        <span class="separator">:</span>
+                        <input type="text" id="pbl-title" value="" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="academic-year">Academic Year</label>
+                        <span class="separator">:</span>
+                        <input type="text" id="academic-year" value="" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <span class="separator">:</span>
+                        <input type="text" id="description" value="" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file-link">File Link</label>
+                        <span class="separator">:</span>
+                        <input type="text" id="file-link" value="" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url-youtube">Url Youtube</label>
+                        <span class="separator">:</span>
+                        <input type="text" id="url-youtube" value="" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="score">Score</label>
+                        <span class="separator">:</span>
+                        <input type="number" id="score" placeholder="0-100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <span class="separator">:</span>
+                        <textarea id="comment" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button type="button" class="btn btn-edit">Edit</button>
+                        <button type="button" class="btn btn-delete">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
