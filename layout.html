@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Lecturer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="nav">
+        <div class="nav-item active">
+          <span class="icon">▶</span>
+          <span>Home</span>
+        </div>
+        <div class="nav-item">Project Assessment</div>
+      </div>
+      <div class="logout">
+        <button>Log Out</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h1>Welcome</h1>
+
+      <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search...">
+  <button onclick="searchTable()">Search 🔍</button>
+</div>
+
+<table class="results-table" id="resultsTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Project Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mahasiswa A</td>
+      <td>Belum Diisi</td>
+    </tr>
+    <tr>
+      <td>Mahasiswa B</td>
+      <td>Belum Diisi</td>
+    </tr>
+    <tr>
+      <td>Mahasiswa C</td>
+      <td>Sudah Dinilai</td>
+    </tr>
+    <!-- Tambahkan baris lainnya -->
+     
+  </tbody>
+</table>
+
+      <div class="next-button">
+        <button>Next</button>
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
