@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Mahasiswa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #635d5d;
+      color: #000;
+    }
+    .container {
+      width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 3px solid #009ee3;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+    .header {
+      background-color: #009ee3;
+      color: white;
+      padding: 15px 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-bottom: 3px solid #007ab8;
+    }
+    .main {
+      display: flex;
+      min-height: 400px;
+    }
+    .sidebar {
+      background-color: #fff;
+      border-right: 3px solid black;
+      width: 180px;
+      padding: 20px;
+      box-sizing: border-box;
+      font-weight: bold;
+    }
+    .sidebar div {
+      margin-bottom: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .sidebar .active {
+      font-weight: 900;
+    }
+    .sidebar .active::after {
+      content: '▶';
+      margin-left: 5px;
+      font-weight: 900;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-container {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background-color: #009ee3;
+      color: white;
+      width: 120px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .button {
+      align-self: flex-end;
+      background-color: #009ee3;
+      color: black;
+      font-weight: bold;
+      font-size: 1em;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100px;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: #007ab8;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Home Mahasiswa</h1>
+  <div class="container">
+    <div class="header">Welcome</div>
+    <div class="main">
+      <div class="sidebar">
+        <div class="active">Home</div>
+        <div>Project</div>
+        <div>Manage Project</div>
+        <div>Log Out</div>
+      </div>
+      <div class="content">
+        <div class="card-container">
+          <div class="card">Title<br>PBL</div>
+          <div class="card">Title<br>PBL</div>
+          <div class="card">Title<br>PBL</div>
+        </div>
+        <button class="button">Next</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
