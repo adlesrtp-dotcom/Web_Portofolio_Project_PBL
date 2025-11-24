@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage Project Student</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #555; /* latar belakang abu gelap */
+      font-family: Arial, sans-serif;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+    .container {
+      width: 700px;
+      background-color: #fff9f8; /* warna background konten */
+      border: 3px solid #09a9dc; /* border biru */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header biru */
+    .header {
+      background-color: #09a9dc;
+      color: white;
+      font-weight: bold;
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+    /* Konten utama: sidebar + form */
+    .main {
+      display: flex;
+      height: 320px;
+    }
+    /* Sidebar kiri */
+    .sidebar {
+      width: 150px;
+      border-right: 2px solid black;
+      padding: 20px 15px;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 16px;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    /* Tanda panah hitam sebelah Manage Project */
+    .sidebar .active {
+      position: relative;
+      padding-left: 20px;
+    }
+    .sidebar .active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 8px 0 8px 14px;
+      border-color: transparent transparent transparent black;
+      height: 0;
+      width: 0;
+      display: block;
+    }
+    /* Form container */
+    .form-container {
+      flex: 1;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    /* Baris form: label + input */
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .form-row label {
+      flex: 0 0 130px;
+    }
+    .colon {
+      margin: 0 10px;
+    }
+    /* Input field */
+    input[type="text"] {
+      flex: 1;
+      padding: 8px 10px;
+      border: none;
+      background-color: #09a9dc;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: black;
+      outline: none;
+    }
+    /* Tombol container */
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 35px;
+      padding: 0 50px;
+    }
+    button {
+      background-color: #09a9dc;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 30px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      color: black;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+      background-color: #007ba1;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Welcome</div>
+    <div class="main">
+      <div class="sidebar">
+        <div>Home</div>
+        <div>Project</div>
+        <div class="active">Manage Project</div>
+        <div>Log Out</div>
+      </div>
+      <div class="form-container">
+        <div class="form-row">
+          <label for="pbl-title">PBL Title</label>
+          <span class="colon">:</span>
+          <input type="text" id="pbl-title" name="pbl-title" />
+        </div>
+        <div class="form-row">
+          <label for="academic-year">academic year</label>
+          <span class="colon">:</span>
+          <input type="text" id="academic-year" name="academic-year" />
+        </div>
+        <div class="form-row">
+          <label for="description">Description</label>
+          <span class="colon">:</span>
+          <input type="text" id="description" name="description" />
+        </div>
+        <div class="form-row">
+          <label for="file-link">File Link</label>
+          <span class="colon">:</span>
+          <input type="text" id="file-link" name="file-link" />
+        </div>
+        <div class="form-row">
+          <label for="url-youtube">Url Youtube</label>
+          <span class="colon">:</span>
+          <input type="text" id="url-youtube" name="url-youtube" />
+        </div>
+        <div class="button-row">
+          <button type="button">Cancel</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
