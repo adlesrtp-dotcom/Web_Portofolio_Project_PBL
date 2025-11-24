@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Project</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #555; /* warna latar belakang luar */
+      font-family: Arial, sans-serif;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+    .container {
+      background-color: #fff9f8;
+      width: 900px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+    }
+    /* Judul tengah atas */
+    h1.title {
+      color: white;
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    /* Header "Welcome" */
+    .header {
+      background-color: #09a9dc;
+      padding: 15px 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    /* Konten utama - bagian sidebar dan konten tabel */
+    .main-content {
+      display: flex;
+      background-color: #fff9f8;
+      min-height: 380px;
+      border-top: 1px solid #09a9dc;
+    }
+    /* Sidebar navigasi */
+    .sidebar {
+      background-color: #fff9f8;
+      width: 180px;
+      border-right: 2px solid black;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    .sidebar div {
+      cursor: default;
+    }
+    /* Panah hitam di samping "Project" */
+    .sidebar .active {
+      position: relative;
+      padding-left: 20px;
+    }
+    .sidebar .active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 7px 0 7px 12px;
+      border-color: transparent transparent transparent black;
+      display: block;
+      height: 0;
+      width: 0;
+    }
+    /* Area konten kanan */
+    .content-area {
+      flex-grow: 1;
+      padding: 20px 25px;
+      box-sizing: border-box;
+    }
+    /* Tabel */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #09a9dc;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      table-layout: fixed;
+      text-align: center;
+      word-wrap: break-word;
+      margin-bottom: 25px;
+    }
+    table th, table td {
+      border: 1px solid white;
+      padding: 10px 5px;
+      vertical-align: middle;
+    }
+    /* Tombol edit dan delete */
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+    }
+    button {
+      background-color: #09a9dc;
+      border: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+      width: 120px;
+      padding: 10px 0;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+      background-color: #007ba1;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Student Project</h1>
+  <div class="container">
+    <div class="header">Welcome</div>
+    <div class="main-content">
+      <div class="sidebar">
+        <div>Home</div>
+        <div class="active">Project</div>
+        <div>Manage Project</div>
+        <div>Log Out</div>
+      </div>
+      <div class="content-area">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Project Title</th>
+              <th>academic year</th>
+              <th>Description</th>
+              <th>File Link</th>
+              <th>Url Youtube</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Contoh baris kosong sesuai gambar -->
+            <tr>
+              <td>&nbsp;</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-container">
+          <button type="button">Edit</button>
+          <button type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
