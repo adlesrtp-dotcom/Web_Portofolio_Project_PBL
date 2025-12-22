@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="logo.png" alt="Logo Polibatam" class="logo">
+
+    <form id="formDaftar">
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" id="nama" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tanggal Lahir</label>
+            <input type="date" id="tglLahir" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="role">
+            <label>
+                <input type="radio" name="role" value="Dosen"> Dosen
+            </label>
+            <label>
+                <input type="radio" name="role" value="Mahasiswa"> Mahasiswa
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>NIM</label>
+            <input type="text" id="nim" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <button type="submit" class="btn">Daftar</button>
+    </form>
+</div>
+
+<script src="script1.js"></script>
+</body>
+</html>
