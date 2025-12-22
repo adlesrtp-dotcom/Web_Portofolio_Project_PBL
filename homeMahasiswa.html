@@ -1,128 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home Mahasiswa</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #635d5d;
-      color: #000;
-    }
-    .container {
-      width: 800px;
-      margin: 20px auto;
-      background-color: #fff;
-      border: 3px solid #009ee3;
-    }
-    h1 {
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 10px 0;
-      font-weight: bold;
-    }
-    .header {
-      background-color: #009ee3;
-      color: white;
-      padding: 15px 20px;
-      font-weight: bold;
-      font-size: 1.2em;
-      border-bottom: 3px solid #007ab8;
-    }
-    .main {
-      display: flex;
-      min-height: 400px;
-    }
-    .sidebar {
-      background-color: #fff;
-      border-right: 3px solid black;
-      width: 180px;
-      padding: 20px;
-      box-sizing: border-box;
-      font-weight: bold;
-    }
-    .sidebar div {
-      margin-bottom: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    .sidebar .active {
-      font-weight: 900;
-    }
-    .sidebar .active::after {
-      content: '▶';
-      margin-left: 5px;
-      font-weight: 900;
-    }
-    .content {
-      flex: 1;
-      padding: 20px;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card-container {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-    .card {
-      background-color: #009ee3;
-      color: white;
-      width: 120px;
-      height: 90px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1em;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .button {
-      align-self: flex-end;
-      background-color: #009ee3;
-      color: black;
-      font-weight: bold;
-      font-size: 1em;
-      border: none;
-      padding: 8px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 100px;
-      text-align: center;
-    }
-    .button:hover {
-      background-color: #007ab8;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Dashboard PBL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background: #6b6b6b;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 1100px;
+            min-height: 600px;
+            background: #fff;
+            border: 4px solid #0099dd;
+        }
+
+        /* HEADER */
+        .header {
+            background: #00a3e0;
+            color: white;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* MAIN LAYOUT */
+        .main {
+            display: flex;
+            min-height: 500px;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 250px;
+            border-right: 3px solid #000;
+            padding: 25px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .sidebar li:hover {
+            color: #00a3e0;
+        }
+
+        .sidebar .active {
+            font-weight: bold;
+        }
+
+        /* CONTENT */
+        .content {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+        }
+
+        .cards {
+            display: flex;
+            gap: 40px;
+        }
+
+        .card {
+            width: 180px;
+            height: 140px;
+            background: #00a3e0;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        /* BUTTON NEXT */
+        .next-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            background: #00a3e0;
+            color: #000;
+            border: none;
+            padding: 14px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .next-btn:hover {
+            background: #008cc4;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <h1>Home Mahasiswa</h1>
-  <div class="container">
-    <div class="header">Welcome</div>
-    <div class="main">
-      <div class="sidebar">
-        <div class="active">Home</div>
-        <div>Project</div>
-        <div>Manage Project</div>
-        <div>Log Out</div>
-      </div>
-      <div class="content">
-        <div class="card-container">
-          <div class="card">Title<br>PBL</div>
-          <div class="card">Title<br>PBL</div>
-          <div class="card">Title<br>PBL</div>
-        </div>
-        <button class="button">Next</button>
-      </div>
+
+<div class="container">
+    <!-- HEADER -->
+    <div class="header">
+        Welcome
     </div>
-  </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <ul>
+                <li class="active">Home ▶</li>
+                <li>Project</li>
+                <li>Manage Project</li>
+                <li>Log Out</li>
+            </ul>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    Title<br>PBL
+                </div>
+                <div class="card">
+                    Title<br>PBL
+                </div>
+                <div class="card">
+                    Title<br>PBL
+                </div>
+            </div>
+
+            <button class="next-btn">Next</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
