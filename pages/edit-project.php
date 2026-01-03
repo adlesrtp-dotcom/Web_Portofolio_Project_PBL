@@ -14,7 +14,6 @@ if (!isset($_SESSION['user_id'])) {
 $id = (int)($_GET['id'] ?? 0);
 if (!$id) die("Proyek tidak ditemukan.");
 
-// Ambil data proyek
 $stmt = $pdo->prepare("
     SELECT * FROM projects 
     WHERE id = ? AND user_id = ?
