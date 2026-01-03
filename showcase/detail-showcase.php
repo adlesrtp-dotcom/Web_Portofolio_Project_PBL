@@ -12,7 +12,6 @@ if (!$id || !is_numeric($id)) {
     die("ID proyek tidak valid.");
 }
 
-// Ambil proyek publik
 $stmt = $pdo->prepare("
     SELECT p.*, u.name as author_name, u.nim
     FROM projects p
@@ -27,7 +26,6 @@ if (!$project) {
     die("Proyek tidak ditemukan atau tidak dipublikasikan.");
 }
 
-// Ambil komentar dosen
 $stmt = $pdo->prepare("
     SELECT c.*, du.name as dosen_name, du.role as dosen_role
     FROM comments c
@@ -59,7 +57,6 @@ $comments = $stmt->fetchAll();
 </head>
 <body class="bg-gray-50">
 
-  <!-- Navbar -->
   <nav class="bg-white shadow-md fixed w-full z-10">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center">
       <a href="index.php" class="flex items-center">
