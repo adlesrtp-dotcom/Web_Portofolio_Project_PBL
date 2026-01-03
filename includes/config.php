@@ -1,5 +1,5 @@
 <?php
-// File: includes/config.php
+
 $host = 'localhost';
 $dbname = 'pbl_portofolio';
 $username = 'root';
